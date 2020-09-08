@@ -80,10 +80,10 @@ const UIController = (() => {
 
             showDice: (num1, num2) => {
                 document.querySelector(DOMStrings.dice1).style.display = 'block';
-                document.querySelector(DOMStrings.dice1).src = `./dice/dice${num1}.png`;
+                document.querySelector(DOMStrings.dice1).src = `./img/dice/dice${num1}.png`;
 
                 document.querySelector(DOMStrings.dice2).style.display = 'block';
-                document.querySelector(DOMStrings.dice2).src = `./dice/dice${num2}.png`;
+                document.querySelector(DOMStrings.dice2).src = `./img/dice/dice${num2}.png`;
             },
             displayInputs: inp => {
                 inp.player1 ? document.querySelector(DOMStrings.name1).textContent = inp.player1 : document.querySelector(DOMStrings.name1).textContent = "Player 1";
