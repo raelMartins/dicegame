@@ -161,7 +161,7 @@ const UIController = (() => {
                 let rand = Math.floor(Math.random() * 6);
                 const backgrounds = ['bgimage','dope\ af','GOT\ Wallpaer\ LS', 'GOT\ wallpaper','nodopenohope', 'soul', 'avengers']
 
-                document.querySelector(DOMStrings.docBody).style.backgroundImage = `url('./backgrounds/${backgrounds[rand]}.jpg')`;
+                document.querySelector(DOMStrings.docBody).style.backgroundImage = `url('./img/backgrounds/${backgrounds[rand]}.jpg')`;
                 //document.querySelector('.body').style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./backgrounds/${backgrounds[rand]}.jpg')`;
             },
             getInput: () => {
