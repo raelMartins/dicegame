@@ -251,7 +251,7 @@ const controller = ((gameCtrl, uiCtrl) => {
             console.log(`The highscore is 100`);
             if (playerScore < 100) {
                 //store the round score in the total score
-                gameCtrl.holdGame();
+                //gameCtrl.holdGame();
                 //Display the total score on the UI
                 uiCtrl.totalScores(gameCtrl.getData());
                 newActive();
