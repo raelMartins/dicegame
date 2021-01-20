@@ -29,50 +29,54 @@
 
 .wrapper {
     width: 1000px;
-    max-width: 80%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    max-width: 85%;
+    height: auto;
+    margin: 50px auto;
     background-color: #fff;
     box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
     overflow: hidden;
 }
-
-.player-0-panel,
-.player-1-panel {
-    width: 50%;
-    float: left;
-    height: 600px;
-    padding: 100px;
+.center-panel {
+    background-color: #eee;
+    position: relative;
 }
-
+.player-0-panel,
+.player-1-panel,
+.center-panel {
+    flex: 1;
+    padding: 40px;
+    min-height: 450px;
+}
+.buttons {
+    position: absolute;
+    bottom: 4%;
+    left: 40%;
+    width: 20%;
+}
 
 /******************************
 *** PLAYERS
 ******************************/
 
 .player-name {
-    font-size: 40px;
+    font-size: 1.3rem;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 100;
-    margin-top: 20px;
-    margin-bottom: 10px;
     position: relative;
 }
 
 .player-score {
     text-align: center;
-    font-size: 80px;
+    font-size: 5rem;
     font-weight: 100;
     color: #35992f;
-    margin-bottom: 130px;
+    margin-bottom: 50px;
 }
 
 .active {
-    background-color: #eee;
+    /* background-color: #eee; */
 }
 
 .active .player-name {
@@ -84,23 +88,24 @@
     font-size: 47px;
     position: absolute;
     color: #35992f;
-    top: -7px;
-    right: 10px;
+    top: -45%;
+    right: 20%;
 }
 
 .player-current-box {
     background-color: #222;
     color: #fff;
-    width: 40%;
-    margin: 0 auto;
-    padding: 12px;
+    width: 50%;
+    margin: 0px auto;
+    margin-top: 100px;
+    padding: 10px;
     text-align: center;
 }
 
 .player-current-label {
     text-transform: uppercase;
     margin-bottom: 10px;
-    font-size: 12px;
+    font-size: .8rem;
     color: #35992f;
 }
 
@@ -109,15 +114,12 @@
 }
 
 button {
-    position: absolute;
-    width: 200px;
-    left: 50%;
-    transform: translateX(-50%);
     color: #555;
     background: none;
     border: none;
     font-family: 'Metal Mania', cursive;
-    font-size: 20px;
+    font-size: 15px;
+    padding: 5px;
     text-transform: uppercase;
     cursor: pointer;
     font-weight: 300;
@@ -128,57 +130,23 @@ button:hover {
     font-weight: 600;
 }
 
-button:hover i {
-    margin-right: 20px;
-}
 
 button:focus {
     outline: none;
 }
 
-i {
-    color: #35992f;
-    display: inline-block;
-    margin-right: 15px;
-    font-size: 32px;
-    line-height: 1;
-    vertical-align: text-top;
-    margin-top: -4px;
-    transition: margin 0.3s;
-}
-
-.btn-new {
-    top: 45px;
-}
-
-.btn-roll {
-    top: 403px;
-}
-
-.btn-hold {
-    top: 467px;
-}
-
 .dice {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    text-align: center;
     height: 80px;
     width: auto;
+    margin: 40px auto;
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
     border-radius: 17px;
 }
 .dice#dice-0 {
-    top: 130px;
 }
 
 .dice#dice-1 {
-    top: 260px;
-}
-
-
-.winner {
-    background-color: #eee;
 }
 
 .winner .player-name {
@@ -188,9 +156,9 @@ i {
 
 input {
     text-align: center;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
+    width: 35%;
+    margin: 15px auto;
+    padding: 10px;
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
     border: none;
     border-bottom: 1.5px solid #35992f;
@@ -198,17 +166,17 @@ input {
 }
 
 #pname0 {
-    position: absolute;
-    top: 160px;
+    /* position: absolute;
+    top: 160px; */
 }
 
 #pname1 {
-    position: absolute;
-    top: 200px;
+    /* position: absolute;
+    top: 200px; */
 }
 #score {
-    position: absolute;
-    top: 240px;
+    /* position: absolute;
+    top: 240px; */
 }
 input:focus {
     outline: none;
@@ -217,11 +185,35 @@ input:focus {
 }
 
 #beg-btn {
-
-    position: absolute;
-    top: 280px;
+    font-size: 12px;
+    width: 25%;
+    margin: 15px auto;
     background-color: #35992f;
     color: white;
     border-radius: 20px;
-    padding: 15px;
+    padding: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+    .wrapper {
+        width: 1000px;
+        display: flex;
+        max-width: 80%;
+        height: 90vh;
+        background-color: #fff;
+        box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+    }
+    .player-0-panel,
+    .player-1-panel,
+    .center-panel {
+        display: flex;
+        flex-direction: column;justify-content: space-between;
+    }
+    .buttons {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+    }
 }
